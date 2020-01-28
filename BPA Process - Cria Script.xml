@@ -1,0 +1,979 @@
+﻿<process name="Cria Script" version="1.0" bpversion="6.6.0.15260" narrative="" byrefcollection="true" preferredid="7d9c378e-1908-4bc5-bc01-071ab1f4c51d" published="true">
+  <view>
+    <camerax>-33</camerax>
+    <cameray>-222</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="36089e5d-95b6-448a-9e54-45df8cadcf9b" type="Normal" published="False">
+    <name>Armas</name>
+    <view>
+      <camerax>206</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="112bab23-dc75-4c92-b8c4-80688f06b5a2" type="Normal" published="False">
+    <name>Cria Script Armas Insert</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="69332043-8e05-42d7-b95d-cab499dbebc7" type="Normal" published="False">
+    <name>Cria Script Npc Insert</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c1d0c3b5-5983-471f-b75b-95d313e1589e" type="Normal" published="False">
+    <name>Npc</name>
+    <view>
+      <camerax>274</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="21adcb76-6dd2-404a-8621-7491a035ed92" name="Start" type="Start">
+    <display x="-150" y="-390" />
+    <onsuccess>1c97a2cc-2fca-42fd-bbdb-395610b86c34</onsuccess>
+  </stage>
+  <stage stageid="f05d5be9-3c67-4a2c-ae67-96d2758ff5d7" name="Stage1" type="ProcessInfo">
+    <display x="-180" y="-465" w="150" h="90" />
+  </stage>
+  <stage stageid="fdd3ca8a-4068-455f-be6c-c27b033af344" name="File" type="Data">
+    <loginhibit onsuccess="true" />
+    <display x="-375" y="-435" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">C:\Users\bruno.d.oliveira\Desktop\MyProjects\Carga.xlsx</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="ebb0d037-d716-4689-9132-0d43eca4c472" name="End1" type="End">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="15" />
+  </stage>
+  <stage stageid="f320073d-a007-4f32-aea5-c0fcd535bca3" name="Item ID" type="Data">
+    <display x="-420" y="-435" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5e4f901c-b5a9-4092-a325-358c1883cdb2" name="Attempts" type="Data">
+    <display x="-465" y="-435" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4f114fcc-d693-4a6d-988d-87df6a98cf36" name="Cria Script Npc Insert" type="SubSheetInfo">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d5c2bf40-6755-4ab4-90c4-d4928d15d797" name="Start" type="Start">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="id_npc" stage="id_npc" />
+      <input type="text" name="nome_npc" stage="nome_npc" />
+      <input type="text" name="raca_npc" stage="raca_npc" />
+      <input type="text" name="classe_npc" stage="classe_npc" />
+      <input type="text" name="table" stage="table" />
+    </inputs>
+    <onsuccess>1afdd9af-95af-4cbc-82cc-505e7b9ec6c1</onsuccess>
+  </stage>
+  <stage stageid="5ffcec48-b309-4715-b54e-7c4ce403e36f" name="End" type="End">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="15" y="90" />
+    <outputs>
+      <output type="text" name="Linha" stage="Row_Script" />
+    </outputs>
+  </stage>
+  <stage stageid="1ea8af62-792a-4dbd-aed5-9deaf5053477" name="id_npc" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-240" y="-30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="19b7cafa-dad6-4616-831a-9be092f8910d" name="nome_npc" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-165" y="-30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="088f6033-f614-4361-aec8-8ee918cdb9ab" name="raca_npc" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-240" y="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0759fe9d-c946-443e-8d89-41d9aa98fe70" name="classe_npc" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-165" y="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3acebca0-7df7-44a5-bd19-d64d27d06d81" name="Row_Script" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-15" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1afdd9af-95af-4cbc-82cc-505e7b9ec6c1" name="Monta_row" type="Calculation">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>5ffcec48-b309-4715-b54e-7c4ce403e36f</onsuccess>
+    <calculation expression="&quot;INSERT INTO &quot; &amp; [table] &amp; &quot; VALUES ( &quot; &amp; [id_npc] &amp; &quot;, '&quot; &amp; [nome_npc] &amp; &quot;', '&quot; &amp; [raca_npc] &amp; &quot;', '&quot; &amp;  [classe_npc] &amp; &quot;');&quot;" stage="Row_Script" />
+  </stage>
+  <stage stageid="3885504b-38a2-4f78-a987-fb96d9a2a706" name="table" type="Data">
+    <subsheetid>69332043-8e05-42d7-b95d-cab499dbebc7</subsheetid>
+    <display x="-210" y="90" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bb199e35-1f3d-4443-a5ee-7c63ddf87ad8" name="Tabela" type="ChoiceStart">
+    <display x="-225" y="-345" />
+    <breakpoint type="0">
+      <condition>
+      </condition>
+    </breakpoint>
+    <groupid>1f192e9f-87a4-4694-af99-84bfa918a9b7</groupid>
+    <choices>
+      <choice expression="[Tabelas.table] = &quot;npc&quot;">
+        <name>Tabela Npc</name>
+        <distance>45</distance>
+        <ontrue>697a7de9-d574-43a0-9a44-447836514092</ontrue>
+      </choice>
+      <choice expression="[Tabelas.table] = &quot;armas&quot;">
+        <name>Tabela Arma</name>
+        <distance>90</distance>
+        <ontrue>5d7fe407-a4f9-4ad2-8ba0-f489a9ad9386</ontrue>
+      </choice>
+      <choice expression="[Tabelas.table] = &quot;armaduras&quot;">
+        <name>Tabela Armaduras</name>
+        <distance>150</distance>
+      </choice>
+      <choice expression="[Tabelas.table] = &quot;magia&quot;">
+        <name>Tabela Magia</name>
+        <distance>210</distance>
+      </choice>
+      <choice expression="[Tabelas.table] = &quot;monstro&quot;">
+        <name>Tabela Monstro</name>
+        <distance>262.5</distance>
+      </choice>
+    </choices>
+  </stage>
+  <stage stageid="60456684-fe03-4548-b979-d3db3eded7cc" name="Nenhuma Tabela" type="ChoiceEnd">
+    <display x="-225" y="-30" />
+    <onsuccess>a699d874-c7eb-4352-b8d5-b782f24299bd</onsuccess>
+    <groupid>1f192e9f-87a4-4694-af99-84bfa918a9b7</groupid>
+  </stage>
+  <stage stageid="1dced45e-cebf-4962-9344-b65d202cd8e3" name="Npc" type="SubSheetInfo">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="33a7c1d0-64b8-47a2-a43e-0dc2f53faddc" name="Start" type="Start">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="-75" y="-135" />
+    <inputs>
+      <input type="text" name="Tabela" stage="Tabela" />
+    </inputs>
+    <onsuccess>f8fe425e-1078-4a00-af72-4104d3c081d3</onsuccess>
+  </stage>
+  <stage stageid="ae3723d1-03e5-4333-b7a8-258ab318e845" name="End" type="End">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="-60" y="195" />
+  </stage>
+  <stage stageid="ebb6e1b5-72e1-4c3f-85f9-fc1ab7d989bd" name="Get Worksheet As Collection" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-135" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Npc&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" friendlyname="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="CurrentData" />
+    </outputs>
+    <onsuccess>f2fac7fb-a149-4915-9c96-11bf02cfeadb</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="f2fac7fb-a149-4915-9c96-11bf02cfeadb" name="Add To Queue" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <narrative>The Data collection contains the items to be added to the queue. The collection may contain single or multiple rows, with each representing an item to be added.
+
+If there is a failure during the process, the queue will be unchanged - i.e. no rows will be loaded even if the error occurred on the last one.
+
+If Defer Until is specified, the items will not be available to be worked until then. Otherwise, they are available immediately.
+
+If the queue has a key field defined, an item added has key data longer than the maximum permitted 255 characters, an error will occur</narrative>
+    <display x="150" y="-90" />
+    <inputs>
+      <input type="text" name="Queue Name" friendlyname="Queue Name" narrative="The name of the queue to add items to" expr="&quot;Scripts_SQL_Npc&quot;" />
+      <input type="collection" name="Data" friendlyname="Data" narrative="A collection containing the data, one row for each item to be added" expr="[CurrentData]" />
+      <input type="datetime" name="Defer Until" friendlyname="Defer Until" narrative="Optionally, the date/time the new item(s) should be deferred until" expr="" />
+      <input type="number" name="Priority" friendlyname="Priority" narrative="Optionally, the priority for the new item(s). Lower numbers represent higher priorities. The default is 0." expr="" />
+      <input type="text" name="Tags" friendlyname="Tags" narrative="Optionally, a semi-colon-separated set of tags to apply to the queue item(s)" expr="" />
+      <input type="text" name="Status" friendlyname="Status" narrative="Optionally, the initial status required of the work queue item(s) " expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Item IDs" friendlyname="Item IDs" narrative="The IDs of the items which have been added to the queue, in the order of the collection of data passed that was input" stage="" />
+    </outputs>
+    <onsuccess>9a60fd99-a447-4d75-9252-d3b22a4beb3c</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Add To Queue" />
+  </stage>
+  <stage stageid="9a60fd99-a447-4d75-9252-d3b22a4beb3c" name="Get Next Item" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <narrative>This action gets the next item to be worked from the queue, returning its details and locking it so no other case can work it.
+
+Items with higher priorities (lower numerical value) are processed first. Where the priority is the same, the next item is the one that has been in the queue the longest,  is not already locked, and is not already completed.
+
+The Item ID returned is used to make further calls to update the work status for that item. It may be empty, in which case there are no items available. This can mean either a) the queue is empty, or b) the queue is not running. This mechanism can be used to cleanly stop all processes working a particular queue at the end of the next case. Items that have a 'deferred' time set will not be returned unless that time has been reached.</narrative>
+    <display x="150" y="-30" />
+    <inputs>
+      <input type="text" name="Queue Name" friendlyname="Queue Name" narrative="The name of the queue" expr="&quot;Scripts_SQL_Npc&quot;" />
+      <input type="text" name="Key Filter" friendlyname="Key Filter" narrative="Optionally, a key value to filter by. Only items with this key value will be considered." expr="" />
+      <input type="text" name="Tag Filter" friendlyname="Tag Filter" narrative="Optionally, a tag mask to filter by. This can consist of any number of tag searches - each term can be separated by a semi-colon and they are all applied to the search (ie. they are AND'ed terms not OR'ed terms). For example, &quot;Account: Joint; -Balance: Overdrawn; Card: *Visa*&quot; will include any items which match all the terms, ie. every item must have an 'Account: Joint' tag applied, no item can have a 'Balance: Overdrawn' tag applied, every item must have a tag applied which starts with 'Card: ' and then contains the text 'Visa'." expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Item ID" friendlyname="Item ID" narrative="The ID of the item retrieved - empty if there are none available." stage="Item ID" />
+      <output type="collection" name="Data" friendlyname="Data" narrative="The data associated with the item - a single collection row." stage="QueueData" />
+      <output type="text" name="Status" friendlyname="Status" narrative="The status of the item." stage="" />
+      <output type="number" name="Attempts" friendlyname="Attempts" narrative="The number of attempts already made to work this item." stage="Attempts" />
+    </outputs>
+    <onsuccess>24e19013-117b-4675-a105-ecb27ddb2468</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Get Next Item" />
+  </stage>
+  <stage stageid="d3c80adf-9288-4aa0-864f-85e6de7743c5" name="Mark Completed" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <narrative>Marks the item as completed, by updating the Completed timestamp and setting Locked to null. The item must be 'owned' by the calling process - i.e. it must have been retrieved using Get Next Item.</narrative>
+    <display x="375" y="15" />
+    <inputs>
+      <input type="text" name="Item ID" friendlyname="Item ID" narrative="The ID of the item to mark" expr="[Item ID]" />
+    </inputs>
+    <onsuccess>4a826319-3d72-4698-abfa-6e9b2a579bbc</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Mark Completed" />
+  </stage>
+  <stage stageid="389bad01-01a5-4b52-aec8-4a09cd35fec0" name="Cria Script Npc Insert" type="SubSheet">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="300" y="15" />
+    <inputs>
+      <input type="text" name="id_npc" friendlyname="id_npc" expr="[QueueData.id_npc]" />
+      <input type="text" name="nome_npc" friendlyname="nome_npc" expr="[QueueData.nome_npc]" />
+      <input type="text" name="raca_npc" friendlyname="raca_npc" expr="[QueueData.raca_npc]" />
+      <input type="text" name="classe_npc" friendlyname="classe_npc" expr="[QueueData.classe_npc]" />
+      <input type="text" name="table" friendlyname="table" expr="[Tabela]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Linha" friendlyname="Linha" stage="Linha" />
+    </outputs>
+    <onsuccess>d3c80adf-9288-4aa0-864f-85e6de7743c5</onsuccess>
+    <processid>69332043-8e05-42d7-b95d-cab499dbebc7</processid>
+  </stage>
+  <stage stageid="24e19013-117b-4675-a105-ecb27ddb2468" name="ItemID exists?" type="Decision">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="150" y="15" />
+    <decision expression="[Item ID]&lt;&gt;&quot;&quot;" />
+    <ontrue>389bad01-01a5-4b52-aec8-4a09cd35fec0</ontrue>
+    <onfalse>3106be34-c0e4-4d7a-b15a-d287dd902928</onfalse>
+  </stage>
+  <stage stageid="4a826319-3d72-4698-abfa-6e9b2a579bbc" name="Append collection" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="375" y="-30" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[OutputCollection]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[QueueData]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="OutputCollection" />
+    </outputs>
+    <onsuccess>dbefdbe6-8dea-4f0d-aac6-0518386dad9b</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="3c128b58-e3bd-46e1-b222-506ecad499a0" name="Write Collection" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="105" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the specified collection should be written. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook within which the data should be written. The default empty value indicates the current workbook within the specified instance." expr="[Workbook Name]" />
+      <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection containing the data which should be written to the worksheet." expr="[ScriptCollection]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet on which the given data should be written. The default empty value indicates the current sheet within the specified workbook." expr="&quot;NpcInsert&quot;" />
+      <input type="text" name="Cell Reference" friendlyname="Cell Reference" narrative="The reference at which the collection should be written." expr="&quot;A1&quot;" />
+      <input type="flag" name="Include Column Names" friendlyname="Include Column Names" narrative="True to indicate that the column names from the collection should be written out as the first row; False to ignore the column names and just write out the data." expr="&quot;False&quot;" />
+    </inputs>
+    <onsuccess>e4a62114-6549-45a6-9272-9e7b206d0879</onsuccess>
+    <resource object="MS Excel VBO" action="Write Collection" />
+  </stage>
+  <stage stageid="1759c061-06bd-499a-ac74-84919d495f6a" name="Close Instance" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="195" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[handle]" />
+      <input type="flag" name="Save Changes" friendlyname="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="&quot;True&quot;" />
+    </inputs>
+    <onsuccess>ae3723d1-03e5-4333-b7a8-258ab318e845</onsuccess>
+    <resource object="MS Excel VBO" action="Close Instance" />
+  </stage>
+  <stage stageid="e4a62114-6549-45a6-9272-9e7b206d0879" name="Save Workbook" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="150" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the workbook which should be saved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which should be saved" expr="[Workbook Name]" />
+    </inputs>
+    <onsuccess>1759c061-06bd-499a-ac74-84919d495f6a</onsuccess>
+    <resource object="MS Excel VBO" action="Save Workbook" />
+  </stage>
+  <stage stageid="3106be34-c0e4-4d7a-b15a-d287dd902928" name="Create Worksheet" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="60" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet should be created. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook in which the sheet should be created - The default empty value indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the sheet which should be activated. The default empty text value indicates that the currently active sheet should be, er, activated, making this a no-op." expr="&quot;NpcInsert&quot;" />
+    </inputs>
+    <onsuccess>3c128b58-e3bd-46e1-b222-506ecad499a0</onsuccess>
+    <resource object="MS Excel VBO" action="Create Worksheet" />
+  </stage>
+  <stage stageid="dbefdbe6-8dea-4f0d-aac6-0518386dad9b" name="Calc1" type="Calculation">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="300" y="-30" />
+    <onsuccess>c19c6688-e645-4420-aaa5-1d229afe6d16</onsuccess>
+    <calculation expression="[Linha]" stage="Script.Linha" />
+  </stage>
+  <stage stageid="c19c6688-e645-4420-aaa5-1d229afe6d16" name="Append collection" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="225" y="-30" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[ScriptCollection]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[Script]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="ScriptCollection" />
+    </outputs>
+    <onsuccess>9a60fd99-a447-4d75-9252-d3b22a4beb3c</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="697a7de9-d574-43a0-9a44-447836514092" name="Npc" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="-300" />
+    <inputs>
+      <input type="text" name="Tabela" friendlyname="Tabela" expr="[Tabelas.table]" />
+    </inputs>
+    <onsuccess>abbf9b56-e08a-4e51-9625-ce2eb7c3b02e</onsuccess>
+    <processid>c1d0c3b5-5983-471f-b75b-95d313e1589e</processid>
+  </stage>
+  <stage stageid="da83ffdb-257a-45fd-82d0-defa138fd8cc" name="Cria Script Armas Insert" type="SubSheetInfo">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="73c68099-4328-415f-9d42-6afd1fd8c3ce" name="Start" type="Start">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="id_arma" stage="id_arma" />
+      <input type="text" name="nome_arma" stage="nome_arma" />
+      <input type="text" name="custo_arma" stage="custo_arma" />
+      <input type="text" name="dano_arma" stage="dano_arma" />
+      <input type="text" name="tipo_de_dano_arma" stage="tipo_de_dano_arma" />
+      <input type="text" name="peso_arma" stage="peso_arma" />
+      <input type="text" name="propriedade_arma" stage="propriedade_arma" />
+      <input type="text" name="observacao_arma" stage="observacao_arma" />
+      <input type="text" name="Tabela" stage="table" />
+    </inputs>
+    <onsuccess>5d2a6a14-ade7-4c2f-abed-61774548ffbc</onsuccess>
+  </stage>
+  <stage stageid="f766ae60-f275-4a19-ab6e-11b813ce9a0d" name="End" type="End">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <display x="15" y="90" />
+    <outputs>
+      <output type="text" name="Linha" stage="Row_Script" />
+    </outputs>
+  </stage>
+  <stage stageid="33d7dba8-ac2e-45ed-826d-8dc3f2b7ca2b" name="id_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-240" y="-30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5963c434-2a5f-42a8-8b09-1e27c81650eb" name="custo_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="-30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3e2155f1-7c96-4a3f-a3b4-fb976ce6a001" name="nome_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="-30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a44cf2f0-e456-42ed-ae15-11e06be97bdd" name="observacao_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="71f46778-c13c-447c-b7b7-76ef0c3f1298" name="peso_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="931a6744-3532-4dd8-b43b-70a14d1cfd12" name="dano_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-240" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="61d419ae-5232-470f-80e5-c6e11c5f29e4" name="tipo_de_dano_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-195" y="0" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="237a9424-7bf8-4abf-97db-3be5291aed90" name="propriedade_arma" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-240" y="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="63a86069-7ace-43b3-9d5f-8a444c27091b" name="Row_Script" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-15" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5d2a6a14-ade7-4c2f-abed-61774548ffbc" name="Monta_row" type="Calculation">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>f766ae60-f275-4a19-ab6e-11b813ce9a0d</onsuccess>
+    <calculation expression="&quot;INSERT INTO &quot; &amp; [table] &amp; &quot; VALUES ( &quot; &amp; [id_arma] &amp; &quot;, '&quot; &amp; [nome_arma] &amp; &quot;', '&quot; &amp; [custo_arma]&amp; &quot;', '&quot; &amp;  [dano_arma] &amp;&quot;', '&quot; &amp;  [tipo_de_dano_arma]  &amp; &quot;', '&quot; &amp;  [peso_arma]&amp; &quot;', '&quot; &amp;  [propriedade_arma] &amp; &quot;', '&quot; &amp; [observacao_arma] &amp; &quot;');&quot;" stage="Row_Script" />
+  </stage>
+  <stage stageid="c3839ea2-9d6a-46ec-869a-b7233bb3ac8d" name="table" type="Data">
+    <subsheetid>112bab23-dc75-4c92-b8c4-80688f06b5a2</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4c8cd889-f4f2-4633-bf85-fca65edec1f6" name="CurrentData" type="Collection">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="-75" y="-180" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="id_npc" type="text" />
+      <field name="nome_npc" type="text" />
+      <field name="raca_npc" type="text" />
+      <field name="classe_npc" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="4ac2d28e-e0cb-41c4-a408-ea373edc5208" name="QueueData" type="Collection">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="-15" y="-180" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1aa58b32-e8e9-43cb-aa96-6afd2577c7e4" name="Linha" type="Data">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="15" y="-225" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1a47c5ee-1634-439e-9087-5b4bcf7fe6eb" name="OutputCollection" type="Collection">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="45" y="-180" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="651c6a1f-6dc1-4daf-a180-a475c4fd28d0" name="Script" type="Collection">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="165" y="-180" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <singlerow />
+      <field name="Linha" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <singlerow />
+      <row>
+        <field name="Linha" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="f672ddb7-f2ac-491b-b8fc-881deba1ba3b" name="ScriptCollection" type="Collection">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <display x="105" y="-180" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Linha" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="243fe7af-c9a6-4dac-a5b1-727becfc1344" name="handle" type="Data">
+    <display x="-420" y="-405" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a9b1960d-24ae-4d29-a2cb-5c459df3d6ed" name="Workbook Name" type="Data">
+    <display x="-465" y="-405" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <alwaysinit />
+  </stage>
+  <stage stageid="48d64cc6-d1d5-443a-b5d2-074e29168c6e" name="Armas" type="SubSheetInfo">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="bbeacb92-e120-4ab5-b73a-250a998b49ae" name="Start" type="Start">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="-75" y="-105" />
+    <inputs>
+      <input type="text" name="Tabela" stage="Tabela" />
+    </inputs>
+    <onsuccess>261d8aa9-8027-46c6-8c81-2f9652dddd3b</onsuccess>
+  </stage>
+  <stage stageid="3deab1d6-b102-41e0-b7d1-4553448e6ba5" name="End" type="End">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="-75" y="45" />
+  </stage>
+  <stage stageid="244accc3-419f-4a0f-82ba-6eb4f1cba020" name="Get Worksheet As Collection" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="-105" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet which should be retrieved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which contains the sheet required. The default empty text indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet within the specified workbook which should be written to a collection. The default empty text indicates the currently active worksheet within the specified workbook." expr="&quot;Armas&quot;" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Data" friendlyname="Data" narrative="The collection containing the data from the specified worksheet - the column IDs will be gleaned from the first row on the sheet being retrieved." stage="CurrentData" />
+    </outputs>
+    <onsuccess>fa05292a-752e-4753-9c32-45f22c0074b6</onsuccess>
+    <resource object="MS Excel VBO" action="Get Worksheet As Collection" />
+  </stage>
+  <stage stageid="fa05292a-752e-4753-9c32-45f22c0074b6" name="Add To Queue" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <narrative>The Data collection contains the items to be added to the queue. The collection may contain single or multiple rows, with each representing an item to be added.
+
+If there is a failure during the process, the queue will be unchanged - i.e. no rows will be loaded even if the error occurred on the last one.
+
+If Defer Until is specified, the items will not be available to be worked until then. Otherwise, they are available immediately.
+
+If the queue has a key field defined, an item added has key data longer than the maximum permitted 255 characters, an error will occur</narrative>
+    <display x="225" y="-105" />
+    <inputs>
+      <input type="text" name="Queue Name" friendlyname="Queue Name" narrative="The name of the queue to add items to" expr="&quot;Scripts_SQL_Arma&quot;" />
+      <input type="collection" name="Data" friendlyname="Data" narrative="A collection containing the data, one row for each item to be added" expr="[CurrentData]" />
+      <input type="datetime" name="Defer Until" friendlyname="Defer Until" narrative="Optionally, the date/time the new item(s) should be deferred until" expr="" />
+      <input type="number" name="Priority" friendlyname="Priority" narrative="Optionally, the priority for the new item(s). Lower numbers represent higher priorities. The default is 0." expr="" />
+      <input type="text" name="Tags" friendlyname="Tags" narrative="Optionally, a semi-colon-separated set of tags to apply to the queue item(s)" expr="" />
+      <input type="text" name="Status" friendlyname="Status" narrative="Optionally, the initial status required of the work queue item(s) " expr="" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Item IDs" friendlyname="Item IDs" narrative="The IDs of the items which have been added to the queue, in the order of the collection of data passed that was input" stage="" />
+    </outputs>
+    <onsuccess>b421eaed-bcc7-4ea6-846b-65b1c8bd6a10</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Add To Queue" />
+  </stage>
+  <stage stageid="b421eaed-bcc7-4ea6-846b-65b1c8bd6a10" name="Get Next Item" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <narrative>This action gets the next item to be worked from the queue, returning its details and locking it so no other case can work it.
+
+Items with higher priorities (lower numerical value) are processed first. Where the priority is the same, the next item is the one that has been in the queue the longest,  is not already locked, and is not already completed.
+
+The Item ID returned is used to make further calls to update the work status for that item. It may be empty, in which case there are no items available. This can mean either a) the queue is empty, or b) the queue is not running. This mechanism can be used to cleanly stop all processes working a particular queue at the end of the next case. Items that have a 'deferred' time set will not be returned unless that time has been reached.</narrative>
+    <display x="225" y="-45" />
+    <inputs>
+      <input type="text" name="Queue Name" friendlyname="Queue Name" narrative="The name of the queue" expr="&quot;Scripts_SQL_Arma&quot;" />
+      <input type="text" name="Key Filter" friendlyname="Key Filter" narrative="Optionally, a key value to filter by. Only items with this key value will be considered." expr="" />
+      <input type="text" name="Tag Filter" friendlyname="Tag Filter" narrative="Optionally, a tag mask to filter by. This can consist of any number of tag searches - each term can be separated by a semi-colon and they are all applied to the search (ie. they are AND'ed terms not OR'ed terms). For example, &quot;Account: Joint; -Balance: Overdrawn; Card: *Visa*&quot; will include any items which match all the terms, ie. every item must have an 'Account: Joint' tag applied, no item can have a 'Balance: Overdrawn' tag applied, every item must have a tag applied which starts with 'Card: ' and then contains the text 'Visa'." expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Item ID" friendlyname="Item ID" narrative="The ID of the item retrieved - empty if there are none available." stage="Item ID" />
+      <output type="collection" name="Data" friendlyname="Data" narrative="The data associated with the item - a single collection row." stage="QueueData" />
+      <output type="text" name="Status" friendlyname="Status" narrative="The status of the item." stage="" />
+      <output type="number" name="Attempts" friendlyname="Attempts" narrative="The number of attempts already made to work this item." stage="Attempts" />
+    </outputs>
+    <onsuccess>75acc46c-4d82-4a0a-a083-82a52b2e8ddc</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Get Next Item" />
+  </stage>
+  <stage stageid="555e6cfd-784b-4cb1-87d6-f64977c4d0c2" name="Mark Completed" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <narrative>Marks the item as completed, by updating the Completed timestamp and setting Locked to null. The item must be 'owned' by the calling process - i.e. it must have been retrieved using Get Next Item.</narrative>
+    <display x="450" y="0" />
+    <inputs>
+      <input type="text" name="Item ID" friendlyname="Item ID" narrative="The ID of the item to mark" expr="[Item ID]" />
+    </inputs>
+    <onsuccess>770c49e3-4754-48ac-a0fd-dbaca811c3b6</onsuccess>
+    <resource object="Blueprism.Automate.clsWorkQueuesActions" action="Mark Completed" />
+  </stage>
+  <stage stageid="db3dd6c6-0b2a-4f8e-be84-d683e24034bd" name="Cria Script Npc Insert" type="SubSheet">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="375" y="0" />
+    <inputs>
+      <input type="text" name="id_arma" friendlyname="id_arma" expr="[QueueData.id_arma]" />
+      <input type="text" name="nome_arma" friendlyname="nome_arma" expr="[QueueData.nome_arma]" />
+      <input type="text" name="custo_arma" friendlyname="custo_arma" expr="[QueueData.custo_arma]" />
+      <input type="text" name="dano_arma" friendlyname="dano_arma" expr="[QueueData.dano_arma]" />
+      <input type="text" name="tipo_de_dano_arma" friendlyname="tipo_de_dano_arma" expr="[QueueData.tipo_de_dano_arma]" />
+      <input type="text" name="peso_arma" friendlyname="peso_arma" expr="[QueueData.peso_arma]" />
+      <input type="text" name="propriedade_arma" friendlyname="propriedade_arma" expr="[QueueData.propriedade_arma]" />
+      <input type="text" name="observacao_arma" friendlyname="observacao_arma" expr="[QueueData.observacao_arma]" />
+      <input type="text" name="Tabela" friendlyname="Tabela" expr="[Tabela]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Linha" friendlyname="Linha" stage="Linha" />
+    </outputs>
+    <onsuccess>555e6cfd-784b-4cb1-87d6-f64977c4d0c2</onsuccess>
+    <processid>112bab23-dc75-4c92-b8c4-80688f06b5a2</processid>
+  </stage>
+  <stage stageid="75acc46c-4d82-4a0a-a083-82a52b2e8ddc" name="ItemID exists?" type="Decision">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="225" y="0" />
+    <decision expression="[Item ID]&lt;&gt;&quot;&quot;" />
+    <ontrue>db3dd6c6-0b2a-4f8e-be84-d683e24034bd</ontrue>
+    <onfalse>89c1346b-a042-4a97-86d6-d68901a0ed3e</onfalse>
+  </stage>
+  <stage stageid="770c49e3-4754-48ac-a0fd-dbaca811c3b6" name="Append collection" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="450" y="-45" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[OutputCollection]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[QueueData]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="OutputCollection" />
+    </outputs>
+    <onsuccess>ed49a9db-f2c4-4afe-a92c-a48c108d3458</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="83350e30-2f44-47c1-a8b5-18b4cf732077" name="Write Collection" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="225" y="90" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the specified collection should be written. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook within which the data should be written. The default empty value indicates the current workbook within the specified instance." expr="[Workbook Name]" />
+      <input type="collection" name="Collection" friendlyname="Collection" narrative="The collection containing the data which should be written to the worksheet." expr="[ScriptCollection]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the worksheet on which the given data should be written. The default empty value indicates the current sheet within the specified workbook." expr="&quot;ArmasInsert&quot;" />
+      <input type="text" name="Cell Reference" friendlyname="Cell Reference" narrative="The reference at which the collection should be written." expr="&quot;A1&quot;" />
+      <input type="flag" name="Include Column Names" friendlyname="Include Column Names" narrative="True to indicate that the column names from the collection should be written out as the first row; False to ignore the column names and just write out the data." expr="&quot;False&quot;" />
+    </inputs>
+    <onsuccess>57a5fd0a-e7d1-481e-b014-3d413ec82284</onsuccess>
+    <resource object="MS Excel VBO" action="Write Collection" />
+  </stage>
+  <stage stageid="3aa88293-e752-4f5b-a737-76447b09f138" name="Close Instance" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="45" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance to be closed. Zero indicates the currently active instance." expr="[handle]" />
+      <input type="flag" name="Save Changes" friendlyname="Save Changes" narrative="True to save the changes to the open workbooks on the instance, False to discard any changes. Default is False." expr="&quot;True&quot;" />
+    </inputs>
+    <onsuccess>3deab1d6-b102-41e0-b7d1-4553448e6ba5</onsuccess>
+    <resource object="MS Excel VBO" action="Close Instance" />
+  </stage>
+  <stage stageid="57a5fd0a-e7d1-481e-b014-3d413ec82284" name="Save Workbook" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="150" y="90" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the workbook which should be saved resides. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook which should be saved" expr="[Workbook Name]" />
+    </inputs>
+    <onsuccess>3aa88293-e752-4f5b-a737-76447b09f138</onsuccess>
+    <resource object="MS Excel VBO" action="Save Workbook" />
+  </stage>
+  <stage stageid="89c1346b-a042-4a97-86d6-d68901a0ed3e" name="Create Worksheet" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="225" y="45" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the worksheet should be created. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name of the workbook in which the sheet should be created - The default empty value indicates the currently active workbook on the specified instance." expr="[Workbook Name]" />
+      <input type="text" name="Worksheet Name" friendlyname="Worksheet Name" narrative="The name of the sheet which should be activated. The default empty text value indicates that the currently active sheet should be, er, activated, making this a no-op." expr="&quot;ArmasInsert&quot;" />
+    </inputs>
+    <onsuccess>83350e30-2f44-47c1-a8b5-18b4cf732077</onsuccess>
+    <resource object="MS Excel VBO" action="Create Worksheet" />
+  </stage>
+  <stage stageid="ed49a9db-f2c4-4afe-a92c-a48c108d3458" name="Calc1" type="Calculation">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="375" y="-45" />
+    <onsuccess>fa559ef4-d531-490b-829b-170f23a8b0e9</onsuccess>
+    <calculation expression="[Linha]" stage="Script.Linha" />
+  </stage>
+  <stage stageid="fa559ef4-d531-490b-829b-170f23a8b0e9" name="Append collection" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="300" y="-45" />
+    <inputs>
+      <input type="collection" name="Main Collection" narrative="The collection to append to." expr="[ScriptCollection]" />
+      <input type="collection" name="Collection to Append" narrative="The collection to append." expr="[Script]" />
+    </inputs>
+    <outputs>
+      <output type="collection" name="Combined Collection" narrative="The combined collection." stage="ScriptCollection" />
+    </outputs>
+    <onsuccess>b421eaed-bcc7-4ea6-846b-65b1c8bd6a10</onsuccess>
+    <resource object="Utility - Collection Manipulation" action="Append Rows to Collection" />
+  </stage>
+  <stage stageid="45006c39-a91a-4844-8993-04b395fd98b7" name="CurrentData" type="Collection">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="15" y="-150" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="id_arma" type="text" />
+      <field name="nome_arma" type="text" />
+      <field name="custo_arma" type="text" />
+      <field name="dano_arma" type="text" />
+      <field name="tipo_de_dano_arma" type="text" />
+      <field name="peso_arma" type="text" />
+      <field name="propriedade_arma" type="text" />
+      <field name="observacao_arma" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="b94fdadd-b569-4808-884e-c338e447b86f" name="QueueData" type="Collection">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="75" y="-150" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8112b130-6f4b-4f18-8ab2-8c63ccc41e31" name="Linha" type="Data">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="105" y="-195" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fd406a16-95d1-40f0-88a3-d439e1a790b3" name="Script" type="Collection">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="255" y="-150" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <singlerow />
+      <field name="Linha" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <singlerow />
+      <row>
+        <field name="Linha" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="ea4bbfc8-888d-4085-9e7d-9c2504a3eeb5" name="ScriptCollection" type="Collection">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="195" y="-150" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Linha" type="text" />
+    </collectioninfo>
+  </stage>
+  <stage stageid="5d7fe407-a4f9-4ad2-8ba0-f489a9ad9386" name="Armas" type="SubSheet">
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="-255" />
+    <inputs>
+      <input type="text" name="Tabela" friendlyname="Tabela" expr="[Tabelas.table]" />
+    </inputs>
+    <onsuccess>24806b7c-7ea4-47f3-9048-113671fe09e0</onsuccess>
+    <processid>36089e5d-95b6-448a-9e54-45df8cadcf9b</processid>
+  </stage>
+  <stage stageid="6d13723c-0001-4b92-a77b-81e8527cd3c7" name="OutputCollection" type="Collection">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <display x="135" y="-150" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="abbf9b56-e08a-4e51-9625-ce2eb7c3b02e" name="Anchor1" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="-300" w="10" h="10" />
+    <onsuccess>24806b7c-7ea4-47f3-9048-113671fe09e0</onsuccess>
+  </stage>
+  <stage stageid="24806b7c-7ea4-47f3-9048-113671fe09e0" name="Anchor2" type="Anchor">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="-255" w="10" h="10" />
+    <onsuccess>a699d874-c7eb-4352-b8d5-b782f24299bd</onsuccess>
+  </stage>
+  <stage stageid="f4b7a4f4-1d04-4eef-9149-d8c4fed0a948" name="Tabelas" type="Collection">
+    <display x="-375" y="-405" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="table" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="table" type="text" value="npc" />
+      </row>
+      <row>
+        <field name="table" type="text" value="armas" />
+      </row>
+      <row>
+        <field name="table" type="text" value="armaduras" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="1c97a2cc-2fca-42fd-bbdb-395610b86c34" name="Loop Start1" type="LoopStart">
+    <loginhibit onsuccess="true" />
+    <display x="-150" y="-345" />
+    <onsuccess>bb199e35-1f3d-4443-a5ee-7c63ddf87ad8</onsuccess>
+    <groupid>4aa33d2e-6183-4fe3-826a-d32e965766eb</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Tabelas</loopdata>
+  </stage>
+  <stage stageid="a699d874-c7eb-4352-b8d5-b782f24299bd" name="Loop End1" type="LoopEnd">
+    <loginhibit onsuccess="true" />
+    <display x="-75" y="-30" />
+    <onsuccess>ebb0d037-d716-4689-9132-0d43eca4c472</onsuccess>
+    <groupid>4aa33d2e-6183-4fe3-826a-d32e965766eb</groupid>
+  </stage>
+  <stage stageid="9b02f3ad-f667-4dd6-9c98-6439aa8cb36b" name="Tabela" type="Data">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="-45" y="-150" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="554210ae-1dee-432e-a8d0-8d0d868b0b68" name="Tabela" type="Data">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-225" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f8fe425e-1078-4a00-af72-4104d3c081d3" name="Create Instance" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="0" y="-135" />
+    <inputs>
+      <input type="flag" name="Enable Events" friendlyname="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" friendlyname="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>877168cc-d115-4a0b-b24c-0d2daacd680a</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="877168cc-d115-4a0b-b24c-0d2daacd680a" name="Open Workbook" type="Action">
+    <subsheetid>c1d0c3b5-5983-471f-b75b-95d313e1589e</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-135" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" friendlyname="File name" narrative="The path and name of the file which should be opened." expr="[File]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>ebb6e1b5-72e1-4c3f-85f9-fc1ab7d989bd</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+  <stage stageid="261d8aa9-8027-46c6-8c81-2f9652dddd3b" name="Create Instance" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="0" y="-105" />
+    <inputs>
+      <input type="flag" name="Enable Events" friendlyname="Enable Events" narrative="Flag to indicate that events should be enabled / disabled on the attached instance - defaulted to True" expr="" />
+    </inputs>
+    <outputs>
+      <output type="number" name="handle" friendlyname="handle" narrative="An integer which can be used to identify the created instance in subsequent actions" stage="handle" />
+    </outputs>
+    <onsuccess>030e3743-7cff-4d8a-aaf5-1d0444285bb0</onsuccess>
+    <resource object="MS Excel VBO" action="Create Instance" />
+  </stage>
+  <stage stageid="030e3743-7cff-4d8a-aaf5-1d0444285bb0" name="Open Workbook" type="Action">
+    <subsheetid>36089e5d-95b6-448a-9e54-45df8cadcf9b</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="75" y="-105" />
+    <inputs>
+      <input type="number" name="handle" friendlyname="handle" narrative="The integer handle identifying the instance on which the required workbook should be opened. The default of zero indicates the currently active instance." expr="[handle]" />
+      <input type="text" name="File name" friendlyname="File name" narrative="The path and name of the file which should be opened." expr="[File]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Workbook Name" friendlyname="Workbook Name" narrative="The name used by Excel to identify the workbook - usually this is the file name (without the path)." stage="Workbook Name" />
+    </outputs>
+    <onsuccess>244accc3-419f-4a0f-82ba-6eb4f1cba020</onsuccess>
+    <resource object="MS Excel VBO" action="Open Workbook" />
+  </stage>
+</process>
